@@ -1,21 +1,18 @@
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
-    "version": "0.1.0",
-    "showOutput": "always",
+    "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "grunt",
-            "command": "grunt",
-            "isShellCommand": true,
-            "args": [
-                "--no-color"
-            ]
+            "label": "grunt",
+            "type": "grunt",
+            "task": "--no-color",
+            "problemMatcher": []
         },
         {
-            "taskName": "jekyll-draft",
+            "label": "jekyll-draft",
+            "type": "shell",
             "command": "bundle",
-            "isShellCommand": true,
             "args": [
                 "exec",
                 "jekyll",
@@ -23,12 +20,13 @@
                 "--watch",
                 "--drafts",
                 "--future"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
-            "taskName": "jekyll-draft-incremental",
+            "label": "jekyll-draft-incremental",
+            "type": "shell",
             "command": "bundle",
-            "isShellCommand": true,
             "args": [
                 "exec",
                 "jekyll",
@@ -37,24 +35,26 @@
                 "--drafts",
                 "--incremental",
                 "--future"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
-            "taskName": "jekyll",
+            "label": "jekyll",
+            "type": "shell",
             "command": "bundle",
-            "isShellCommand": true,
             "args": [
                 "exec",
                 "jekyll",
                 "serve",
                 "--watch",
                 "--future"
-            ]
+            ],
+            "problemMatcher": []
         },
         {
-            "taskName": "jekyll-incremental",
+            "label": "jekyll-incremental",
+            "type": "shell",
             "command": "bundle",
-            "isShellCommand": true,
             "args": [
                 "exec",
                 "jekyll",
@@ -62,7 +62,8 @@
                 "--watch",
                 "--incremental",
                 "--future"
-            ]
+            ],
+            "problemMatcher": []
         }
     ]
 }
